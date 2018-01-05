@@ -1,0 +1,33 @@
+{
+  "name": "ibukantin-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakashdivyy/ibukantin-server.git"
+  },
+  "author": "Prakash Divy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prakashdivyy/ibukantin-server/issues"
+  },
+  "homepage": "https://github.com/prakashdivyy/ibukantin-server#readme",
+  "dependencies": {
+    "google-auth-library": "^0.11.0",
+    "googleapis": "^22.2.0",
+    "js-yaml": "^3.10.0",
+    "merapi": "^0.18.3",
+    "merapi-plugin-express": "^0.3.7",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.0",
+    "@types/request-promise": "^4.1.39",
+    "typescript": "^2.6.2"
+  }
+}

@@ -1,0 +1,46 @@
+schema: kata.ai/schema/merapi/1.0
+
+name: ${package.name}
+version: ${package.version}
+
+plugins:
+    - express
+
+components:
+    app:
+        type: express
+        config: app
+
+    # controllers
+    demoController: controllers/DemoController
+
+    # managers
+    excelManager: managers/ExcelManager
+
+    # main
+    main: Main
+
+app:
+    host: 0.0.0.0
+    port: ${$PORT}
+    router:
+        mergeParams: true
+    routes:
+        POST /add: 
+            - demoController.test
+        GET /user/:userId:
+            - demoController.getUser
+
+clientSecret: ${$GOOGLE_CLIENT_SECRET}
+clientId: ${$GOOGLE_CLIENT_ID}
+redirectUrl : ${$GOOGLE_REDIRECT_URL}
+access_token: ${$GOOGLE_ACCESS_TOKEN}
+expiry_date: ${$GOOGLE_EXPIRY_DATE}
+refresh_token: ${$GOOGLE_REFRESH_TOKEN}
+token_type: ${$GOOGLE_TOKEN_TYPE}
+spreadsheetId: ${$SPREADSHEET_ID}
+templateSheetId: ${$TEMPLATE_SHEET_ID}
+bot_token: ${$BOT_TOKEN}
+
+# entry point
+main: main
